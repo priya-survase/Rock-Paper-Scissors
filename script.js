@@ -70,7 +70,7 @@ function game(){
     for(let i=0; i<5; i++){
 
         let playerSelection;
-        result = prompt("Enter your sign!(Rock, Paper or scissors)");
+        
         playerSelection = result.toLowerCase();
         compSelection = compPlay();
         

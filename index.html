@@ -5,15 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">  
 </head>
 <body>
-    <h2>To be played from console</h2>
+    <div class="header">
+        <h1>ROCK-PAPER-SCISSORS</h1>
 
-    <h3>HOW TO PlAY:</h3>
-    <p>Right-click anywhere on a webpage and select Inspect. Click on Console.Refresh the page to start.</p>
-    <p>Play  5 Times to complete a game.</p>
-    <p>Refresh the page to play again.</p>
+    </div>
+
+    <div class="rps">
+        <div class="rps-row-title">Choose your weapon. First one to score 5 points wins!</div>
+        <div class="rps-row">
+            <div class="rps-cell" id="rock" onclick=" game('rock');">&#9994</div>
+            <div class="rps-cell" id="paper" onclick="game('paper')">&#9995</div>
+            <div class="rps-cell" id="scissors" onclick="game('scissors')">&#9996</div>
+        </div>
+    </div>
+
+    <div class="score">
+        <div class="score-box">
+            <div class="player-score">0</div>
+            <div class="score-caption">Player</div>
+        </div>
+        
+        <div class="score-box">
+            <div class="computer-score">0</div>
+            <div class="score-caption">Computer</div>
+        </div>
+
+    </div>
+
+    <div class="msg-box">
+        <p>Message!</p>
+    </div>
+
+    <div class="play-again">
+        <div class="play-again-btn">Play Again</div>
+    </div>
+    
+    
     
 </body>
 </html>
