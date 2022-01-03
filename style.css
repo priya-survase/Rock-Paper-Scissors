@@ -39,6 +39,10 @@
     border-radius: 10px;
     box-shadow: white;
 }
+.rps-cell:hover{
+    background-color: white;
+    box-shadow: 10px white;
+}
 .score{
     text-align: center;
     display: flex;
@@ -59,8 +63,12 @@
 }
 
 #msg-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
-    text-align: center;
+    font-size: 30px;
+    
 }
 .play-again{
     display: flex;
@@ -78,4 +86,8 @@
     width: 100px;
     border: 3px solid white;
     border-radius: 5px;
+}
+.play-again-btn:hover{
+    background-color: white;
+    color: black;
 }

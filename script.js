@@ -1,181 +1,118 @@
-// function compPlay(){
-//     var array = ["rock", "paper", "scissors"];
+function playerSelect(choice){
+    let playerSelection = choice;
+}
+function compPlay(){
+var array = ["rock", "paper", "scissors"];
 
-//     var result = array[Math.floor(Math.random()*array.length)];
+var result = array[Math.floor(Math.random()*array.length)];
 
-//     return result;
-// }
-
-
-
-// function playRound(playerSelection, compSelection){
-
-    
-
-//     if(playerSelection == "rock"){
-//         if(compSelection == "rock"){
-//             playerScore +=1;
-//             compScore +=1;
-//             return "It's tie!";
-//         }
-//         if(compSelection == "paper"){
-//             compScore += 1;
-//             return "You lose! Paper beats Rock!";
-//         }
-//         if(compSelection == "scissors"){
-//             playerScore += 1;
-//             return "You win! Rock beats Scissors!";
-//         }
-
-//     }
-
-//     if(playerSelection == "paper"){
-//         if(compSelection == "paper"){
-//             playerScore +=1;
-//             compScore +=1;
-//             return "It's tie!";
-//         }
-//         if(compSelection == "scissors"){
-//             compScore += 1;
-//             return "You lose! Scissors beats Paper!";
-//         }
-//         if(compSelection == "rock"){
-//             playerScore += 1;
-//             return "You win! Rock beats Paper!";
-//         }
-
-//     }
-
-//     if(playerSelection == "scissors"){
-//         if(compSelection == "scissors") {
-//             playerScore +=1;
-//             compScore +=1;
-//             return "It's tie!";
-//         }
-//         if(compSelection == "rock"){
-//             compScore += 1;
-//             return "You lose! Rock beats Scissors!";
-//         }
-//         if(compSelection == "paper"){
-//             playerScore += 1;
-//             return "You win! Scissors beats Paper!";
-//         }
-
-//     }
-// }
-
-// function game(){
-
-    
-//     for(let i=0; i<5; i++){
-
-//         let playerSelection;
-        
-//         playerSelection = result.toLowerCase();
-//         compSelection = compPlay();
-        
-//         console.log(playRound(playerSelection, compSelection));
-//         console.log(`PlayerScore : ${playerScore} || ComputerScore : ${compScore}`);
-//     }
-    
-//     if(playerScore>compScore) return "You Won the game!!Congrats";
-//     else if(playerScore>compScore) return "Oh No!! You lose! Better Luck next time!!";
-//     else return "It's a tie";
-// }
-// let compScore = 0;
-// let playerScore =0;
-
-// console.log(game());
-
-// //----------------------------------
-
-    function playerSelect(choice){
-        let playerSelection = choice;
-    }
- function compPlay(){
-    var array = ["rock", "paper", "scissors"];
-
-    var result = array[Math.floor(Math.random()*array.length)];
-
-    return result;
+return result;
 }
 
 function playRound(playerSelection, compSelection){
 
-    
 
-    if(playerSelection == "rock"){
-        if(compSelection == "rock"){
-            document.getElementsByClassName("msg-box").innerHTML = "It's a tie!";
-        }
-        if(compSelection == "paper"){
-            compScore += 1;
-            document.getElementsByClassName("msg-box").innerHTML = "You lose! Paper beats Rock!";
-        }
-        if(compSelection == "scissors"){
-            playerScore += 1;
-            document.getElementsByClassName("msg-box").innerHTML = "You win! Rock beats Scissors!";
-            
-        }
 
+if(playerSelection == "rock"){
+    if(compSelection == "rock"){
+        document.getElementById('msg-box').innerHTML = "It's a tie! Choose again!";
+    }
+    if(compSelection == "paper"){
+        compScore += 1;
+        document.getElementById('computer-score').innerHTML = `${compScore}`;
+        document.getElementById('msg-box').innerHTML = "You lose! Paper beats Rock!Choose again!";
+    }
+    if(compSelection == "scissors"){
+        playerScore += 1;
+        document.getElementById('player-score').innerHTML = `${playerScore}`;
+        document.getElementById('msg-box').innerHTML = "You win! Rock beats Scissors! Choose again!";
+        
     }
 
-    if(playerSelection == "paper"){
-        if(compSelection == "paper"){
-            playerScore +=1;
-            compScore +=1;
-            document.getElementsByClassName("msg-box").innerHTML = "It's a tie!";
-        }
-        if(compSelection == "scissors"){
-            compScore += 1;
-            document.getElementsByClassName("msg-box").innerHTML = "You lose! Scissors beats Paper!";
-            
-        }
-        if(compSelection == "rock"){
-            playerScore += 1;
-            document.getElementsByClassName("msg-box").innerHTML = "You win! Rock beats Paper!";
-        }
+}
 
+if(playerSelection == "paper"){
+    if(compSelection == "paper"){
+        document.getElementById('msg-box').innerHTML = "It's a tie! Choose again!" ;
+    }
+    if(compSelection == "scissors"){
+        compScore += 1;
+        document.getElementById('computer-score').innerHTML = `${compScore}`;
+        document.getElementById('msg-box').innerHTML = "You lose! Scissors beats Paper! Choose again!";
+        
+    }
+    if(compSelection == "rock"){
+        playerScore += 1;
+        document.getElementById('player-score').innerHTML = `${playerScore}`;
+        document.getElementById('msg-box').innerHTML = "You win! Rock beats Paper! Choose again!";
     }
 
-    if(playerSelection == "scissors"){
-        if(compSelection == "scissors") {
-            playerScore +=1;
-            compScore +=1;
-            document.getElementsByClassName("msg-box").innerHTML = "It's a tie!";
-        }
-        if(compSelection == "rock"){
-            compScore += 1;
-            document.getElementsByClassName("msg-box").innerHTML = "You lose! Rock beats Scissors!";
-        }
-        if(compSelection == "paper"){
-            playerScore += 1;
-            document.getElementsByClassName("msg-box").innerHTML = "You win! Scissors beats Paper!";
-        }
+}
 
+if(playerSelection == "scissors"){
+    if(compSelection == "scissors") {
+        
+        document.getElementById('msg-box').innerHTML = "It's a tie! Choose again!";
     }
+    if(compSelection == "rock"){
+        compScore += 1;
+        document.getElementById('computer-score').innerHTML = `${compScore}`;
+        document.getElementById('msg-box').innerHTML = "You lose! Rock beats Scissors! Choose again!";
+    }
+    if(compSelection == "paper"){
+        playerScore += 1;
+        document.getElementById('player-score').innerHTML = `${playerScore}`;
+        document.getElementById('msg-box').innerHTML = "You win! Scissors beats Paper! Choose again!";
+    }
+
+}
 }
 
 function game(choice){
+    
+    console.log("in game");
+
+   
+        let playerSelection;
+        playerSelection = choice;
+        let compSelection;
+        compSelection = compPlay();
+        playRound(playerSelection, compSelection);
+
+        console.log(`PlayerScore : ${playerScore} || ComputerScore : ${compScore}`);
         
-        console.log("in game");
 
-        while(1){
-            let playerSelection;
-            playerSelection = choice;
-            let compSelection;
-            compSelection = compPlay();
-            playRound(playerSelection, compSelection);
-
-            console.log(`PlayerScore : ${playerScore} || ComputerScore : ${compScore}`);
-            
-
+    
+    if(playerScore == 5){
+            win();
         }
-        if(playerScore == 5)
-        document.getElementById("msg-box").innerHTML = "You win! Congratulations!";
-        else if(compScore == 5)
-        document.getElementById("msg-box").innerHTML = "Oh no! You lost! Better Luck Next Time :)" ;
-        console.log("Choose Again!");
+    else if(compScore == 5){
+        
+        lose();
+        
+    }
+    
+    
+}
+
+function reset(){
+    playerScore =0;
+    compScore = 0;
+    document.getElementById('computer-score').innerHTML = `${compScore}`;
+    document.getElementById('player-score').innerHTML = `${playerScore}`;
+    document.getElementById('msg-box').style.fontSize = "30px";
+    document.getElementById('msg-box').style.color = "white";
+    document.getElementById('msg-box').innerHTML = "Okay! Let's Play Again! :)" ;
+}
+function win(){
+        document.getElementById('msg-box').style.fontSize = "40px";
+        document.getElementById('msg-box').style.color = "Green";
+        document.getElementById('msg-box').innerHTML = "You win! Congratulations!";
+}
+function lose(){
+        document.getElementById('msg-box').style.fontSize = "40px";
+        document.getElementById('msg-box').style.color = "red";
+        document.getElementById('msg-box').innerHTML = "Oh no! You lose! Better Luck Next Time :)" ;
         
 }
 
