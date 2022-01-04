@@ -14,40 +14,52 @@
 <body>
     <div class="header">
         <h1>ROCK-PAPER-SCISSORS</h1>
-
+ 
     </div>
-
-    <div class="rps">
-        <div class="rps-row-title">Choose your weapon. First one to score 5 points wins!</div>
+ 
+    <div class="rps-computer">
+        <!-- <div class="rps-row-title">Choose your weapon. First one to score 5 points wins!</div> -->
         <div class="rps-row">
-            <div class="rps-cell" id="rock" onclick=" game('rock');">&#9994</div>
-            <div class="rps-cell" id="paper" onclick="game('paper')">&#9995</div>
-            <div class="rps-cell" id="scissors" onclick="game('scissors')">&#9996</div>
+            <div class="rps-cell shadow-drop-2-center rps-c-cell" id="computer">&#9994</div>
+           
         </div>
     </div>
-
+    <div id="hidden">
+        <div id="msg-box">
+            <p>Hii!</p>
+        </div>
+ 
+        <div class="play-again" onclick="reset()">
+            <div class="play-again-btn">Play Again</div>
+        </div>
+    </div>
+    <div class="rps-player">
+        <div class="rps-row-title">Choose your weapon. First one to score 5 points wins!</div>
+        <div class="rps-row">
+            <div class="rps-cell shadow-drop-2-center rps-p-cell" id="rock" onclick=" game('rock'), select();">&#9994</div>
+            <div class="rps-cell shadow-drop-2-center rps-p-cell" id="paper" onclick="game('paper'), select();">&#9995</div>
+            <div class="rps-cell shadow-drop-2-center rps-p-cell" id="scissors" onclick="game('scissors'), select();">&#9996</div>
+        </div>
+    </div>
+ 
     <div class="score">
         <div class="score-box">
             <div id="player-score">0</div>
             <div class="score-caption">Player</div>
         </div>
-        
+       
         <div class="score-box">
             <div id="computer-score">0</div>
             <div class="score-caption">Computer</div>
         </div>
-
+ 
     </div>
-
-    <div id="msg-box">
-        <p>Hii!</p>
+    <div class = "footer">
+        created by- <a href="https://github.com/priya-survase">@priya-survase</a>
     </div>
-
-    <div class="play-again" onclick="reset()">
-        <div class="play-again-btn">Play Again</div>
-    </div>
-    
-    
-    
+   
+   
+   
+   
 </body>
 </html>

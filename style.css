@@ -1,83 +1,93 @@
 *{
-    /*border: 1px solid white;*/
+    /* border: 1px solid white; */
     background-color: black;
     color: white;
     font-family: 'Orbitron', sans-serif;
-}
-
-.header{
+ }
+ .header{
     text-align: center;
-    height: 50px;
-}
-
-.rps{
-    height: 300px;
+    height: auto;;
+ }
+ .rps-computer, .rps-player{
+    height: auto;
     border-color: #8b0000;
-    margin-top: 3px;
+    margin: auto;
     text-align: center;
-    
-}
-.rps-row-title{
-    margin-top: 3px;
-    font-size: 20px;
-}
-.rps-row{
-    margin: 50px;
+    /* border: 1px solid white; */
+  
+ }
+ .rps-row-title{
+    padding:  10px;
+    font-size: 1.5em;
+ }
+ .rps-row{
+  
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
-}
-.rps-cell{
+    justify-content: space-evenly;
+    gap: 5px;
+  
+ }
+ .rps-cell{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 200px;
-    font-size: 100px;
     border: 3px solid white;
     border-radius: 10px;
     box-shadow: white;
-}
-.rps-cell:hover{
+ }
+ .rps-c-cell{
+    height: 200px;
+    width: 200px;
+    font-size: 100px;
+ }
+ .rps-p-cell{
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+ }
+ .rps-cell:hover{
     background-color: white;
-    box-shadow: 10px white;
-}
-.score{
+    box-shadow: 5px 10px  gainsboro;
+ }
+ .score{
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-}
-.score-box{
+ }
+ .score-box{
     height: 100px;
     width: 100px;
     display: flex;
     flex-direction: column;
     font-size: 50px;
     justify-content: space-around;
-}
-.score-caption{
+ }
+ .score-caption{
     font-size: 20px;
-}
-
-#msg-box{
+ }
+ #hidden{
+    display: none;
+ }
+ #msg-box{
+  
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-    font-size: 30px;
-    
-}
-.play-again{
+    font-size: 3em;
+  
+ }
+ .play-again{
     display: flex;
     margin: 30px;
     align-items: center;
     justify-content: center;
-    
-}
-.play-again-btn{
+  
+ }
+ .play-again-btn{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -86,8 +96,14 @@
     width: 100px;
     border: 3px solid white;
     border-radius: 5px;
-}
-.play-again-btn:hover{
+ }
+ .play-again-btn:hover{
     background-color: white;
     color: black;
-}
+ }
+ .footer{
+    text-align: center;
+    font-size: 0.8em;
+    height: auto;
+    padding: 2%;
+ } 
